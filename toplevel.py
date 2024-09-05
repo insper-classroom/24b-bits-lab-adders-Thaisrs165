@@ -13,7 +13,8 @@ def toplevel(LEDR, SW, KEY, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, CLOCK_50, RESET_
     # ---------------------------------------- #
     # ula
     # ---------------------------------------- #
-    ic1 = adder(sw_s[0:4], sw_s[6:10], ledr_s[0:4], ledr_s[9])
+    ic1 = adder(sw[0:4], sw[6:10], ledr_s[0:4], ledr_s[9])
+    ic2 = bin2hex(HEX0, ledr_bin)
 
     # ledr_unsigned = ConcatSignal(*reversed(ledr_s))
     # ic2 = bin2hex(HEX0, ledr_unsigned)
